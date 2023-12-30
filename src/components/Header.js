@@ -11,11 +11,11 @@ const Header = () => {
   return (
     <header className="stock-header">
       <div className="logo">
-        <Link to="/login">StockMarket Dashboard</Link>
+        <Link to="/login">StockTrade</Link>
       </div>
       <nav>
         <ul>
-          {currentUser ? (
+          {!currentUser ? (
             <>
               <li>
                 <Link to="/login">Login</Link>
@@ -30,10 +30,16 @@ const Header = () => {
                 <Link to="/home">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/graph">Graphs</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/cashflow">Cash-Flow</Link>
+              </li>
+              <li>
+                <Link to="/aboutUs">About</Link>
+              </li>
+              <li>
+                <Link to="/contactUs">Contact</Link>
               </li>
               <li>
                 <Logout />

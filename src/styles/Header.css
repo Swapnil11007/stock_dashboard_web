@@ -1,7 +1,7 @@
 .stock-header {
-  background-color: #1c7398;
+  background-color: #0e0f0e;
   color: #ecf0f1;
-  padding: 10px;
+  padding: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +16,10 @@
   font-weight: bold;
 }
 
+nav ul li {
+  margin-right: 20px;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -23,8 +27,8 @@ nav ul {
   display: flex;
 }
 
-nav ul li {
-  margin-right: 20px;
+nav ul li a:hover {
+  color: #c7c7c7;
 }
 
 nav ul li a {
@@ -35,6 +39,3 @@ nav ul li a {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #c7c7c7;
-}
