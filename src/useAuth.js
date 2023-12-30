@@ -16,12 +16,12 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = (email, password) => {
-    setUsers((prevUsers) => [...prevUsers, { email, password }]);
-  };
-
   const logout = () => {
     setCurrentUser(null);
+  };
+
+  const register = (email, password) => {
+    setUsers((prevUsers) => [...prevUsers, { email, password }]);
   };
 
   const value = {

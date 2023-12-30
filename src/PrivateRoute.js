@@ -1,7 +1,7 @@
 // PrivateRoute.js
 import React from "react";
-import { Navigate, Route } from "react-router-dom";
 import { useAuth } from "./useAuth";
+import { Navigate, Route } from "react-router-dom";
 
 const PrivateRoute = ({ element, ...rest }) => {
   const { currentUser } = useAuth();

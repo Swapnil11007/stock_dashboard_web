@@ -14,7 +14,6 @@ const Login = () => {
     const user = users.find((u) => u.email === formData.email);
     if (user && user.password === formData.password) {
       login(formData.email, formData.password);
-      alert("Succesfully Logged in");
       console.log("Logging in with:", formData);
       navigate("/graph");
     } else {
