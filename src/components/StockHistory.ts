@@ -11,6 +11,16 @@ async function getMultipleStocks() {
   return Promise.all(dataSources);
 }
 
+export async function getAppleStock() {
+  const response = await fetch(appleStock);
+  const jsonData = await response.json();
+  const stockData = convertData(jsonData);
+  stockData.__dataIntents = {
+    close: ["SeriesTitle/Microsoft"],
+  };
+  return stockData;
+}
+
 export async function getMicrosoftStock() {
   const response = await fetch(micorsoftStock);
   const jsonData = await response.json();
@@ -21,15 +31,7 @@ export async function getMicrosoftStock() {
   return stockData;
 }
 
-export async function getAppleStock() {
-  const response = await fetch(appleStock);
-  const jsonData = await response.json();
-  const stockData = convertData(jsonData);
-  stockData.__dataIntents = {
-    close: ["SeriesTitle/Microsoft"],
-  };
-  return stockData;
-}
+
 
 export function convertData(jsonData) {
   return jsonData.map((json) => {

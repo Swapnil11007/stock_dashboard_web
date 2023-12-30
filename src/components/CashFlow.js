@@ -1,12 +1,12 @@
 // Graph.js
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { cashFlowApi } from "../config";
-import StockChart from "./charts/StockChart";
 import getMultipleStocks from "./StockHistory.ts";
 import "../styles/Graph.css";
 import { IgrFinancialChartModule } from "igniteui-react-charts";
 import { Typography } from "antd";
+import React, { useEffect, useState } from "react";
+import { cashFlowApi } from "../config";
+import StockChart from "./charts/StockChart";
 
 
 IgrFinancialChartModule.register();

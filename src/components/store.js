@@ -1,3 +1,4 @@
+// to store data
 import { createStore, combineReducers } from 'redux';
 import stockDataReducer from './stockDataReducer';
 

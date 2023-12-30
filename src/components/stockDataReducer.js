@@ -1,5 +1,6 @@
 const initialState = [];
 
+// here we declare reducer
 const stockDataReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_STOCK_DATA':

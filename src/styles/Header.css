@@ -1,19 +1,19 @@
 .stock-header {
   background-color: #0e0f0e;
   color: #ecf0f1;
-  padding: 12px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: sans-serif;
+  padding: 12px;
+  display: flex; 
 }
 
 .logo a {
   text-decoration: none;
   color: #fff;
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
 nav ul li {

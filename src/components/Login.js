@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../useAuth";
+import { Link } from "react-router-dom";
 import "../styles/AuthPages.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const { users, login } = useAuth();
@@ -17,8 +17,8 @@ const Login = () => {
       console.log("Logging in with:", formData);
       navigate("/graph");
     } else {
-      alert("Wrong username or Password");
       console.error("Invalid login credentials");
+      alert("Wrong username or Password \nPlease register if new user");
     }
   };
 
@@ -43,6 +43,7 @@ const Login = () => {
         <button type="button" onClick={handleLogin}>
           Login
         </button>
+        <br/>
         <p>
           Don't have an account? <Link to="/register">Register</Link>
         </p>

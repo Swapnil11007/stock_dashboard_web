@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { useAuth } from "../useAuth"; // Update the path
 import "../styles/AuthPages.css";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useAuth } from "../useAuth"; // Update the path
+
 
 const Register = () => {
   const { register } = useAuth(); // Use the register function

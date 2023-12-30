@@ -11,7 +11,6 @@ const StockTable = () => {
       .then((response) => {
         console.log(response.data);
         setTableData(response.data);
-        console.log(stocks, "all stock data");
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -24,10 +23,10 @@ const StockTable = () => {
           <tr>
             <th>Company</th>
             <th>Symbol</th>
-            <th>Latest Price</th>
             <th>Change</th>
             <th>Change Percent</th>
             <th>Market Cap</th>
+            <th>Latest Price</th>
           </tr>
         </thead>
         <tbody>
@@ -40,10 +39,11 @@ const StockTable = () => {
               >
                 <td>{stock.companyName}</td>
                 <td>{stock.symbol}</td>
-                <td>{stock.latestPrice}</td>
                 <td>{stock.change}</td>
                 <td>{stock.changePercent}</td>
                 <td>{stock.marketCap}</td>
+                <td>{stock.latestPrice}</td>
+
               </tr>
             ))}
         </tbody>

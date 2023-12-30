@@ -106,14 +106,14 @@ const Home = () => {
       key: 'symbol',
     },
     {
-      title: 'Current Price',
-      dataIndex: 'latestPrice',
-      key: 'latestPrice',
-    },
-    {
       title: 'Highest Price',
       dataIndex: 'high',
       key: 'high',
+    },
+    {
+      title: 'Current Price',
+      dataIndex: 'latestPrice',
+      key: 'latestPrice',
     },
     {
       title: 'Currency',

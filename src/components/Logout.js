@@ -10,9 +10,7 @@ const Logout = () => {
 
   const handleLogout = () => {
     navigate("/login");
-    // Implement the logout logic here
     logout();
-    // Optionally, you can redirect to the login page after logout
   };
 
   return <Link onClick={handleLogout}>Logout</Link>;

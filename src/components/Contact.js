@@ -2,8 +2,8 @@
 import React from "react";
 
 const Contact = () => {
-  const companyAddress = "413 Stock market Street, Financial District, Mumbai, India";
   const emailAddress = "contactInfo@stocktrade.com";
+  const companyAddress = "413 Stock market Street, Financial District, Mumbai, India";
 
   return (
     <div>

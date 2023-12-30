@@ -4,6 +4,18 @@ import { render, screen } from "@testing-library/react";
 import Contact from "./Contact";
 
 describe("Contact component", () => {
+
+
+  test("renders assistance message", () => {
+    render(<Contact />);
+
+    // Check if the assistance message is rendered
+    expect(
+      screen.getByText(
+        /If you have any questions or concerns, please feel free to contact us./i
+      )
+    ).toBeInTheDocument();
+  });
   test("renders contact information", () => {
     render(<Contact />);
 
@@ -21,17 +33,6 @@ describe("Contact component", () => {
     });
     expect(emailLink).toBeInTheDocument();
     expect(emailLink.href).toEqual("mailto:info@stocktrade.com");
-  });
-
-  test("renders assistance message", () => {
-    render(<Contact />);
-
-    // Check if the assistance message is rendered
-    expect(
-      screen.getByText(
-        /If you have any questions or concerns, please feel free to contact us./i
-      )
-    ).toBeInTheDocument();
   });
 });
 

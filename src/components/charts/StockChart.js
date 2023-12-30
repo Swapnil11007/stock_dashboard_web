@@ -1,16 +1,18 @@
 import React from "react";
+import "../../styles/StockChart.css";
 import {
   LineChart,
   Line,
-  Tooltip,
   CartesianGrid,
   ResponsiveContainer,
   XAxis,
+  Tooltip,
+
   YAxis,
 } from "recharts";
-import "../../styles/StockChart.css";
 
 const StockChart = ({ stockData }) => {
+
   const formatYAxis = (tick) => {
     return (tick / 1000000000).toFixed(2) + "B";
   };
@@ -18,6 +20,7 @@ const StockChart = ({ stockData }) => {
   return (
     <div className="chart-container">
       <h1 className="chart-title">Cash Flow</h1>
+
       <ResponsiveContainer width="100%" height={300}>
         <LineChart
           data={stockData}

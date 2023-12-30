@@ -17,6 +17,26 @@ describe("About component", () => {
       )
     ).toBeInTheDocument();
   });
+  test("renders contact information", () => {
+    render(<About />);
+
+    // Check if the Contact Us heading is rendered
+    expect(screen.getByText("Contact Us")).toBeInTheDocument();
+
+    // Check if the contact information is rendered
+    expect(
+      screen.getByText(
+        /If you have any questions or inquiries, feel free to reach out to us at/i
+      )
+    ).toBeInTheDocument();
+
+    // Check if the email address is rendered as a link
+    const emailLink = screen.getByRole("link", {
+      name: /info@stocktrade.com/i,
+    });
+    expect(emailLink).toBeInTheDocument();
+    expect(emailLink.href).toEqual("mailto:info@stocktrade.com");
+  });
 
   test("renders traders information", () => {
     render(<About />);
@@ -40,26 +60,6 @@ describe("About component", () => {
     });
   });
 
-  test("renders contact information", () => {
-    render(<About />);
-
-    // Check if the Contact Us heading is rendered
-    expect(screen.getByText("Contact Us")).toBeInTheDocument();
-
-    // Check if the contact information is rendered
-    expect(
-      screen.getByText(
-        /If you have any questions or inquiries, feel free to reach out to us at/i
-      )
-    ).toBeInTheDocument();
-
-    // Check if the email address is rendered as a link
-    const emailLink = screen.getByRole("link", {
-      name: /info@stocktrade.com/i,
-    });
-    expect(emailLink).toBeInTheDocument();
-    expect(emailLink.href).toEqual("mailto:info@stocktrade.com");
-  });
 });
 
 // Add more test cases as needed to achieve complete coverage
