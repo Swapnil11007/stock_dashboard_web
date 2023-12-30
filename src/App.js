@@ -17,22 +17,23 @@ import CashFlow from "./components/CashFlow";
 const App = () => {
   return (
     <Provider store={store}>
-    <AuthProvider>
-      <Router>
-        <div>
-          <Header />
-          <Routes>
-            <Route path="/home" element={<PrivateRoute element={<Home />} />} />
-            <Route path="/graph" element={<PrivateRoute element={<Graph />} />} />
-            <Route path="/cashflow" element={<PrivateRoute element={<CashFlow />} />} />
-            <Route path="/aboutUs" element={<About />} />
-            <Route path="/contactUs" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Registration />} />
-          </Routes>
-        </div>
-      </Router>
-    </AuthProvider>
+      <AuthProvider>
+        <Router>
+          <div>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/home" element={<PrivateRoute element={<Home />} />} />
+              <Route path="/graph" element={<PrivateRoute element={<Graph />} />} />
+              <Route path="/cashflow" element={<PrivateRoute element={<CashFlow />} />} />
+              <Route path="/aboutUs" element={<About />} />
+              <Route path="/contactUs" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Registration />} />
+            </Routes>
+          </div>
+        </Router>
+      </AuthProvider>
     </Provider>
   );
 };
